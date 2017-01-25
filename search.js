@@ -6,7 +6,6 @@ const GOOGLE_API_SEARCH_CX = process.env.GOOGLE_API_SEARCH_CX;
 const GOOGLE_API_SEARCH_KEY = process.env.GOOGLE_API_SEARCH_KEY;
 
 module.exports = function(query, offset, callback) {
-    console.log('Term: ', query);
     var url = urlHelper.parse(GOOGLE_API_SEARCH_ENDPOINT);
     url.query = {
         q: query.replace(" ", "+"),
