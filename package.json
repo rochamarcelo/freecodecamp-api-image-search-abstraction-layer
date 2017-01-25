@@ -19,6 +19,7 @@
   "homepage": "https://github.com/rochamarcelo/freecodecamp-api-image-search-abstraction-layer#readme",
   "dependencies": {
     "express": "^4.14.0",
-    "mongodb": "^2.2.22"
+    "mongodb": "^2.2.22",
+    "request": "^2.79.0"
   }
 }
