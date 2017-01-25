@@ -4,6 +4,7 @@
   "description": "Image Search Abstraction Layer for freeCodeCamp project",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/rochamarcelo/freecodecamp-api-image-search-abstraction-layer/issues"
   },
-  "homepage": "https://github.com/rochamarcelo/freecodecamp-api-image-search-abstraction-layer#readme"
+  "homepage": "https://github.com/rochamarcelo/freecodecamp-api-image-search-abstraction-layer#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongodb": "^2.2.22"
+  }
 }
