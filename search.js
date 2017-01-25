@@ -6,15 +6,17 @@ const GOOGLE_API_SEARCH_CX = process.env.GOOGLE_API_SEARCH_CX;
 const GOOGLE_API_SEARCH_KEY = process.env.GOOGLE_API_SEARCH_KEY;
 
 module.exports = function(query, offset, callback) {
+    console.log('Term: ', query);
     var url = urlHelper.parse(GOOGLE_API_SEARCH_ENDPOINT);
     url.query = {
-        q: query,
+        q: query.replace(" ", "+"),
         start: offset ? parseInt(offset) : 1,
         cx: GOOGLE_API_SEARCH_CX,
         key: GOOGLE_API_SEARCH_KEY,
         searchType: 'image',
         fields: "items(image(contextLink,thumbnailLink),link,snippet)"
     }
+
     url = urlHelper.format(url);
     request({url}, (error, response, body) => {
         if(error || response.statusCode != 200){
